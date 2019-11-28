@@ -1,6 +1,6 @@
 def truncate_utf8(string, max_size):
     """
-    Given a string and maximum size, this methods checks string's UTF-8
+    Given a string and maximum size, this function checks string's UTF-8
     byte-size and truncates if needed. When it happens, ellipses are appended
     to the result string so users will know it's different from the original
     value.

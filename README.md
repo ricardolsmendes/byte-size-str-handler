@@ -21,7 +21,7 @@ symbols, and emoji (pictographic symbols).
 
 ## The `byte_size_string_handler` module
 
-- `truncate_utf8()`: given a string and maximum size, this function checks
+- `truncate_utf8()`: given a string and maximum size, the function checks
 string's UTF-8 byte-size and truncates if needed. Implementation is based on
 StackOverflow [question][4] and [answers][5].
 
