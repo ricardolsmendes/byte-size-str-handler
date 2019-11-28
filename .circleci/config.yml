@@ -19,17 +19,27 @@ jobs:
             python3 -m venv venv
 
       - run:
-          name: Run Flake8 on source and test files
+          name: Install/upgrade flake8 linter
           command: |
             . venv/bin/activate
             pip install --upgrade flake8
+
+      - run:
+          name: Run Flake8 on source and test files
+          command: |
+            . venv/bin/activate
             flake8 ./src ./tests
+
+      - run:
+          name: Install/upgrade setup-related packages
+          command: |
+            . venv/bin/activate
+            pip install --upgrade pip setuptools wheel
 
       - run:
           name: Install the package
           command: |
             . venv/bin/activate
-            pip install --upgrade setuptools
             pip install .
 
       - run:
