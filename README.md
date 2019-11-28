@@ -4,9 +4,9 @@
 
 ## Handle Python strings according to their size in bytes
 
-String values may be limited by some libraries or APIs at a given char length
-when encoded in UTF-8. Encoded chars may need from 1 to 4 bytes
-([please refer to Wikipedia for details][3]):
+Encoded strings may need to fit a specific size in bytes to be accepted by some
+libraries or APIs. Let's take UTF-8 chars, for instance, they may need from 1
+to 4 bytes ([please refer to Wikipedia for details][3]):
 - the first 128 characters (US-ASCII) need one byte;
 - the next 1,920 characters need two bytes to encode, which covers the 
 remainder of almost all Latin-script alphabets, and also Greek, Cyrillic,
