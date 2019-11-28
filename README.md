@@ -19,9 +19,9 @@ Chinese, Japanese and Korean characters;
 include less common CJK characters, various historic scripts, mathematical
 symbols, and emoji (pictographic symbols).
 
-## The `ByteSizeStringHandler` class
+## The `byte_size_string_handler` module
 
-- `truncate_utf8()`: given a string and maximum size, this methods checks
+- `truncate_utf8()`: given a string and maximum size, this function checks
 string's UTF-8 byte-size and truncates if needed. Implementation is based on
 StackOverflow [question][4] and [answers][5].
 

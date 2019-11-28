@@ -12,8 +12,7 @@ class ByteSizeStringHandlerTest(unittest.TestCase):
         1 byte when encoded in UTF-8.
         """
         input_string = 'a' * 2001
-        result = byte_size_string_handler.ByteSizeStringHandler\
-            .truncate_utf8(input_string, 2000)
+        result = byte_size_string_handler.truncate_utf8(input_string, 2000)
 
         self.assertEqual(2000, len(result))
         self.assertEqual(f'{"a" * 1997}...', result)
@@ -26,8 +25,7 @@ class ByteSizeStringHandlerTest(unittest.TestCase):
         needs 2 bytes and dots need 1 byte when encoded in UTF-8.
         """
         input_string = 'ã' * 1010
-        result = byte_size_string_handler.ByteSizeStringHandler\
-            .truncate_utf8(input_string, 2000)
+        result = byte_size_string_handler.truncate_utf8(input_string, 2000)
 
         self.assertEqual(1001, len(result))
         self.assertEqual(f'{"ã" * 998}...', result)
@@ -41,8 +39,7 @@ class ByteSizeStringHandlerTest(unittest.TestCase):
         encoded in UTF-8.
         """
         input_string = f'{"a" * 1990}{"ã" * 10}'
-        result = byte_size_string_handler.ByteSizeStringHandler \
-            .truncate_utf8(input_string, 2000)
+        result = byte_size_string_handler.truncate_utf8(input_string, 2000)
 
         self.assertEqual(1996, len(result))
         self.assertEqual(f'{"a" * 1990}{"ã" * 3}...', result)
