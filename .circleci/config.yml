@@ -27,7 +27,7 @@ jobs:
           name: Install the package
           command: |
             . venv/bin/activate
-            pip install --upgrade setuptools
+            pip install --upgrade setuptools wheel
             pip install .
       - run:
           name: Run the unit tests
