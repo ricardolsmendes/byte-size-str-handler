@@ -5,7 +5,7 @@ def truncate_utf8(string, max_size):
     to the result string so users will know it's different from the original
     value.
     """
-    assert string
+    assert string and isinstance(string, str)
 
     encoding = 'UTF-8'
     encoded = string.encode(encoding)
