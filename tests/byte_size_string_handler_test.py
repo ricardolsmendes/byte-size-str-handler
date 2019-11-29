@@ -4,7 +4,6 @@ import byte_size_string_handler
 
 
 class ByteSizeStringHandlerTest(unittest.TestCase):
-
     def test_truncate_utf8_should_truncate(self):
         """
         - Input string: 2001 'a' chars;
