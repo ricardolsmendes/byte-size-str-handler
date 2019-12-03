@@ -21,7 +21,7 @@ jobs:
             pip install --upgrade pip
 
       - run:
-          name: Run YAPF format check on source and test code
+          name: Run YAPF style check on source and test code
           command: |
             . venv/bin/activate
             pip install --upgrade yapf
@@ -33,13 +33,6 @@ jobs:
             . venv/bin/activate
             pip install --upgrade flake8
             flake8 ./src ./tests
-
-      - run:
-          name: Install the package
-          command: |
-            . venv/bin/activate
-            pip install --upgrade setuptools wheel
-            pip install .
 
       - run:
           name: Run the unit tests
