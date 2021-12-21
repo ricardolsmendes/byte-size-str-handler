@@ -17,6 +17,7 @@ setuptools.setup(
     ),
     tests_require=(
         'pytest-cov',
+        'tomli ~= 1.2.2',
     ),
     classifiers=[
         'Development Status :: 3 - Alpha',
